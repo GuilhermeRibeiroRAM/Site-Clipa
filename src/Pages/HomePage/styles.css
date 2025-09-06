@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #BCB893;
+    background-size: 400%;
+    animation: gradient 10s ease infinite;
+    min-height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.center-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0 20px;
+
+    color: #2d3748;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-bar {
+    background-color: #8A9A5B;
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 10vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-bar li {
+    position: relative;
+}
+
+.menu-bar a {
+    background-color: #808d59;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-family: DejaVu Sans Mono, monospace;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.menu-bar a:hover {
+   background-color: #BCB893;
+   color: #333;
+    
+}
+
+.user-profile img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.user-profile img:hover {
+    opacity: 0.6;
+}
+
+.logo-clipa {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-clipa img {
+    height: 80px;
+    width: auto;
+}
+
+.division-line{
+  background-color: #333;
+  height: 1px;
+  width: 100%;
+}
+
+.hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 50px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .headline {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+            color: #4a5568;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            color: #2d3748;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+/* Menu responsivo para tablet */
+@media screen and (max-width: 992px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+    
+    .nav-links {
+        gap: 10px;
+    }
+    
+    .menu-bar a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .center-title {
+        font-size: 2rem;
+    }
+}
+
+/* Menu responsivo para mobile pequeno */
+@media screen and (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .menu-bar a {
+        padding: 10px;
+    }
+    
+    .center-title {
+        font-size: 1.5rem;
+        padding: 0 15px;
+    }
+    
+    .user-profile {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .user-profile img {
+        height: 35px;
+        width: 35px;
+    }
+}
+
+/* Menu responsivo para mobile */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+    
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+    
+    .logo-clipa {
+        position: static;
+        order: 1;
+        transform: none;
+        margin: 10px 0;
+    }
+    
+    .logo-clipa img {
+        height: 60px;
+    }
+    
+    .user-profile {
+        order: 2;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+    
+    .center-title {
+        font-size: 1.8rem;
+        height: 70vh;
+    }
+}
