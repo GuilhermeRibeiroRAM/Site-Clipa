@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Login from "./Pages/Login"
+import HomePage from "./Pages/HomePage"
 
 export default function App() {
 
@@ -7,7 +7,7 @@ export default function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/login' element={<Login/>}/>
+          <Route path='/' element={<HomePage/>}/>
         </Routes>
       </BrowserRouter>
     </>
